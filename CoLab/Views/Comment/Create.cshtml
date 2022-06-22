@@ -1,0 +1,54 @@
+﻿@model Comments
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form method="post">
+    <div class="border-bottom p-3 mt-4">
+        <div class="row pb-2">
+            <h2>
+                Create Comment
+            </h2>
+        </div>
+        <div class="mb-3">
+           <label asp-for="commentText"></label>
+           <input asp-for="commentText" class="form-control"/>
+           <span asp-validation-for="commentText" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+           <label asp-for="dateCreated"></label>
+           <input asp-for="dateCreated" class="form-control"/>
+           <span asp-validation-for="dateCreated" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+           <label asp-for="createdBy"></label>
+           <input asp-for="createdBy" class="form-control"/>
+           <span asp-validation-for="createdBy" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+           <label asp-for="totalYes"></label>
+           <input asp-for="totalYes" class="form-control"/>
+           <span asp-validation-for="totalYes" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+           <label asp-for="totalNo"></label>
+           <input asp-for="totalNo" class="form-control"/>
+           <span asp-validation-for="totalNo" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+           <label asp-for="totalAbstain"></label>
+           <input asp-for="totalAbstain" class="form-control"/>
+           <span asp-validation-for="totalAbstain" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn-primary btn" style="width:150px">Create</button>
+        <a asp-controller="Comment" asp-action="Index" class="btn-primary btn">back to list</a> 
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

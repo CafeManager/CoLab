@@ -1,0 +1,58 @@
+﻿@model CoLab.Models.Comments
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Comments</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="commentText" class="control-label"></label>
+                <input asp-for="commentText" class="form-control" />
+                <span asp-validation-for="commentText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dateCreated" class="control-label"></label>
+                <input asp-for="dateCreated" class="form-control" />
+                <span asp-validation-for="dateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="createdBy" class="control-label"></label>
+                <input asp-for="createdBy" class="form-control" />
+                <span asp-validation-for="createdBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="totalYes" class="control-label"></label>
+                <input asp-for="totalYes" class="form-control" />
+                <span asp-validation-for="totalYes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="totalNo" class="control-label"></label>
+                <input asp-for="totalNo" class="form-control" />
+                <span asp-validation-for="totalNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="totalAbstain" class="control-label"></label>
+                <input asp-for="totalAbstain" class="form-control" />
+                <span asp-validation-for="totalAbstain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Comments>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index Comments</h1>
+<a asp-area="" asp-controller="Comment" asp-action="Create"> Create  a comment</a>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                commentText
+            </th>
+            <th>
+                dateCreated
+            </th>
+            <th>
+                createdBy
+            </th>
+            <th>
+                totalYes
+            </th>
+            <th>
+                totalNo
+            </th>
+            <th>
+                totalAbstain
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td width="50%">
+                    @obj.Id
+                </td>
+                <td width="30%">
+                    @obj.commentText
+                </td>
+                                <td width="30%">
+                    @obj.dateCreated
+                </td>
+                                <td width="30%">
+                    @obj.createdBy
+                </td>
+                                <td width="30%">
+                    @obj.totalYes
+                </td>
+                                <td width="30%">
+                    @obj.totalNo
+                </td>
+                                <td width="30%">
+                    @obj.totalAbstain
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

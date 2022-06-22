@@ -1,0 +1,41 @@
+html {
+  font-size: 14px;
+}
+
+body {
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.brand-border {
+    padding-right: 3px;
+    border-right: 1px solid black;
+}
+
+.brand-text {
+    font-family: Courier New, Courier, monospace
+}
+
+.nav-offset {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.tab-spacing{
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
